@@ -1,19 +1,13 @@
 package net.PTSonlineshoppingback_end;
-import net.PTSonlineshoppingback_end.services.CategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
-public class Application implements CommandLineRunner{
-    @Autowired
-    private CategoryService categoryService;
+@ComponentScan(basePackages = {"net.PTSonlineshoppingback_end.model","net.PTSonlineshoppingback_end.repository"
+        + "net.PTSonlineshoppingback_end.securityConfig","net.PTSonlineshoppingback_end.services"})
+public class Application{
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-    @Override
-    public void run(String... args) throws Exception {
-        categoryService.displayCategories();
-        System.out.println("Added");
-    }
+   
 }

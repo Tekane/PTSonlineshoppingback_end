@@ -1,12 +1,17 @@
 package net.PTSonlineshoppingback_end.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 
 
 /**
  *
  * @author tekane
  */
+@Entity
 public class Category {
+    @Id
     private int id;
     private String name;
     private String description;

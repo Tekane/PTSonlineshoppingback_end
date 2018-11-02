@@ -1,10 +1,10 @@
 package net.PTSonlineshoppingback_end.repository;
 
-import org.springframework.stereotype.Repository;
+import net.PTSonlineshoppingback_end.model.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
 /**
  *
  * @author tekane
  */
-@Repository("categoryRepository")
-public interface CategoryRepository{
+public interface CategoryRepository extends JpaRepository<Category, Integer>{
 }
