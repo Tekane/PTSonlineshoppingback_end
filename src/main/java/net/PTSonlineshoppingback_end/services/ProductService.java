@@ -38,11 +38,11 @@ public class ProductService {
         product.setActive(false);
         this.productRepository.save(product);
     }
-    public  List<Product> getAllActiveProducts(){
+    public  List<Product> getActiveProducts(){
         List<Product> products = this.productRepository.findAllActiveProducts();
         return products !=null && products.size() > 0 ? products : null;
     }
-    public  List<Product> getAllActiveProductsByCategorId(int category){
+    public  List<Product> getActiveProductsByCategorId(int category){
         List<Product> productsList = this.productRepository.findActiveProductsByCategoryId(category);
         return productsList !=null && productsList.size() > 0 ? productsList : null;
     }
