@@ -65,7 +65,7 @@ public class ProductTestCase {
         // List<Product> products =  this.productService.getAllActiveProducts();
          //System.out.println(products.size());
          
-         List<Product> products  = this.productService.getAllActiveProductsByCategorId(3);
+         List<Product> products  = this.productService.getActiveProductsByCategoryId(3);
          System.out.println(products.size());
     }
     @Test
