@@ -15,8 +15,8 @@ import org.springframework.data.jpa.repository.Query;
 public interface ProductRepository extends JpaRepository<Product, Integer>{ 
     @Query("FROM Product as pd WHERE pd.active = 1")
     List<Product> findAllActiveProducts();
-    @Query("FROM Product as pd WHERE pd.active = 1 and pd.categoryId = ?1")
+    @Query("FROM Product WHERE active = :active and categoryId = :categoryId")
     List<Product> findActiveProductsByCategoryId(int categoryId);
-    @Query("FROM Product as pd where pd.active = 1 order by id")
+    @Query("From Product where active = :active order by id")
     List<Product> findLatestActiveProducts(int count);
 }

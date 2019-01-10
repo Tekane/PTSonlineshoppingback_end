@@ -35,18 +35,18 @@ public class ProductTestCase {
     @Autowired
     private final ProductService productService = null;
 
-    //@Test
+    @Test
     public void testProduct(){
         Product product = new Product();
-        product.setName("TV");
-        product.setBrand("LG");
-        product.setDescription("LG QLED");
-        product.setUnitPrice(15000);
+        product.setName("PS4");
+        product.setBrand("Sony");
+        product.setDescription("PS4 for players , comes in 4K");
+        product.setUnitPrice(8000);
         product.setActive(true);
         product.setCategoryId(3);
-        product.setSuppliedId(2);
+        product.setSuppliedId(3);
         
-        this.productService.createProduct(product);
+        //this.productService.createProduct(product);
         
         Product product2 = new Product();
         product2.setName("PS4");
@@ -59,18 +59,7 @@ public class ProductTestCase {
         
        // this.productService.deleteProduct(product);
        
-    }
-   // @Test
-    public void getActiveProducts(){
-        // List<Product> products =  this.productService.getAllActiveProducts();
-         //System.out.println(products.size());
-         
-         List<Product> products  = this.productService.getAllActiveProductsByCategorId(3);
-         System.out.println(products.size());
-    }
-    @Test
-    public void getLatestActiveProduct(){
-         List<Product> products  =  this.productService.getLatestActiveProducts(3);
-         System.out.println(products.size());
+        List<Product> products =  this.productService.getAllActiveProducts();
+        System.out.println(products.size());
     }
 }
