@@ -21,10 +21,11 @@ public class ApplicationTests {
 
     @Autowired
     private CategoryService categoryService;
+    
 	@Test
 	public void testAddCategory() {
-            Category category   = new Category("TV", "TestDe", "TestUrl");
-            this.categoryService.addCategory(category);
+           Category category =  new Category("Laptop", "Macbook Pro","Apple");
+           this.categoryService.addCategory(category);
 	}
 
 }
