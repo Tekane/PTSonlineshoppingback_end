@@ -141,5 +141,12 @@ public class Product {
     public void setViews(int views) {
         this.views = views;
     }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
 }

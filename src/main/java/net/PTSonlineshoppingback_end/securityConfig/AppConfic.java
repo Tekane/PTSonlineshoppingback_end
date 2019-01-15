@@ -20,7 +20,7 @@ public class AppConfic extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       http.authorizeRequests().antMatchers("/","/home/","about","/css/*","/js/*").permitAll();
+       http.authorizeRequests().antMatchers("/","/home/","about","/css/*","/js/*","/images/*").permitAll();
     }
     
 }
