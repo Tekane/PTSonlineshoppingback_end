@@ -60,7 +60,7 @@ public class ProductTestCase {
        // this.productService.deleteProduct(product);
        
     }
-   // @Test
+     @Test
     public void getActiveProducts(){
         // List<Product> products =  this.productService.getAllActiveProducts();
          //System.out.println(products.size());
