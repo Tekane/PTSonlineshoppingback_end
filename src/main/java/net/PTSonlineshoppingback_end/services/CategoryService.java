@@ -20,8 +20,10 @@ public class CategoryService {
         this.categoryRepository = categoryRepository;
     }
     public  List<Category> displayCategories(){
-           return categoryRepository.findAll();
+
+        return categoryRepository.findAll();
     }
+
     public Category getCategoryById(int id){
             for (Category category : categoryRepository.findAll()) {
                 if (category.getId() == id) {
@@ -31,6 +33,6 @@ public class CategoryService {
              return  null;
       }
     public void addCategory(Category category){
-         this.categoryRepository.save(category);
+        this.categoryRepository.save(category);
     }      
 }

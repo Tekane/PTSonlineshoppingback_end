@@ -23,7 +23,7 @@ public class ApplicationTests {
     private CategoryService categoryService;
 	@Test
 	public void testAddCategory() {
-            Category category   = new Category("TV", "TestDe", "TestUrl");
+            Category category   = new Category("Mobile", "Best mobile devices in store", "mobileUrl");
             this.categoryService.addCategory(category);
 	}
 

@@ -31,6 +31,7 @@ public class ProductService {
     public void createProduct(Product product){
         this.productRepository.save(product);
     }
+
     public void updateProduct(Product product){
         
     }
